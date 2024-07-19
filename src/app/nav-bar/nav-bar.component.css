@@ -72,3 +72,11 @@ li {
     margin-left: 10px;
   }
 }
+
+.navbar-darkmode a{
+  color: #fff;
+}
+
+.navbar-darkmode .icon {
+  color: #fff;
+}

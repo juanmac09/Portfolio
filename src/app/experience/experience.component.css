@@ -116,3 +116,19 @@
         display: none;
     }
 }
+
+
+.experience-darkMode .title h2{
+    color: #fff;
+}
+.experience-darkMode .timeline {
+    background: #161515a7;
+}
+
+.experience-darkMode .line{
+    background: #fff;
+}
+
+.experience-darkMode .event::before{
+    background: #fff;
+}

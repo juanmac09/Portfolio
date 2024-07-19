@@ -1,9 +1,11 @@
-<app-nav-bar></app-nav-bar>
+<div [ngClass]="{'darkMode':returnMode()}">
+  <app-nav-bar></app-nav-bar>
 
-<main>
+  <main>
     <app-about-me></app-about-me>
-    <app-technologies></app-technologies>
     <app-experience></app-experience>
+    <app-technologies></app-technologies>
     <app-projects></app-projects>
     <app-footer></app-footer>
-</main>
+  </main>
+</div>

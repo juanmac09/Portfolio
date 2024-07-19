@@ -91,3 +91,8 @@
     margin: 10px auto; /* Espacio alrededor de cada elemento */
   }
 }
+
+
+.profile-section-dark-mode{
+  color: #fff;
+}

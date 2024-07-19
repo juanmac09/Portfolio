@@ -21,3 +21,7 @@
   width: 100%;
   max-width: 1200px;
 }
+
+.tecnologies-darkmode .title h2{
+  color: #fff;
+}

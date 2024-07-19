@@ -12,5 +12,9 @@
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-style: italic;
-    font-size: 2em;
+    font-size: 1.5em;
+}
+
+.projects-darkmode .title h2{
+    color: #fff;
 }

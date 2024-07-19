@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '../Services/Translate/translate.service';
 import { DataService } from '../Services/Data/data.service';
+import { DarkModeService } from '../Services/DarkMode/dark-mode.service';
+import { NgClass } from '@angular/common';
 
 interface Menu {
   about: string;
@@ -12,12 +14,13 @@ interface Menu {
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [],
+  imports: [NgClass],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css',
 })
 export class NavBarComponent implements OnInit {
   language: number = 0;
+  darkMode: number = 0;
   urlFile: string = '';
   data: Menu = {
     about: '',
@@ -27,7 +30,8 @@ export class NavBarComponent implements OnInit {
   };
   constructor(
     private translateService: TranslateService,
-    private dataService: DataService
+    private dataService: DataService,
+    private modeService: DarkModeService
   ) {}
 
   ngOnInit(): void {
@@ -73,5 +77,27 @@ export class NavBarComponent implements OnInit {
       language === 0
         ? 'Hoja_de_vida_Juan_David_Romero_Sanchez.pdf'
         : 'Hoja_de_vida_Juan_David_Romero_Sanchez.english.pdf';
+  }
+
+  /**
+   * This method is responsible for toggling the dark mode theme of the application.
+   * It updates the `darkMode` property and calls the `setMode` method of the `DarkModeService`
+   * to change the theme of the application.
+   *
+   * @returns {void} - This method does not return any value.
+   */
+  setDarkMode() {
+    this.darkMode = this.darkMode == 0 ? 1 : 0;
+    this.modeService.setMode = this.darkMode;
+  }
+
+  /**
+   * This method is responsible for determining whether the dark mode theme is currently enabled.
+   * It returns a boolean value indicating whether the dark mode theme is active (`true`) or not (`false`).
+   *
+   * @returns {boolean} - A boolean value indicating whether the dark mode theme is active.
+   */
+  returnMode(): boolean {
+    return this.darkMode === 1;
   }
 }

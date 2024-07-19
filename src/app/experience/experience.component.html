@@ -1,8 +1,8 @@
-<section class="experience" id="experience">
+<section class="experience" id="experience" [ngClass]="{'experience-darkMode': returnMode()}">
   <div class="title">
     <h2>{{ experience.title }}</h2>
   </div>
-  <div class="timeline">
+  <div class="timeline" [ngClass]="{'experience-darkMode': returnMode()}">
     <div class="line"></div>
     <div class="timeline-container">
       @for (item of experience.jobs; track $index) {

@@ -1,5 +1,5 @@
-<section class="projects" id="projects">
-  <div class="title">{{ data.title }}</div>
+<section class="projects" id="projects" [ngClass]="{'projects-darkmode': returnMode()}">
+  <div class="title"><h2>{{ data.title }}</h2></div>
   <div class="projects-card">
     @for (item of data.projects; track $index) {
     <app-project
