@@ -1,20 +1,57 @@
 <header>
-  <nav class="navbar" [ngClass]="{'navbar-darkmode': returnMode()}">
-    <ul>
-      <div class="container-left">
-        <li><a href="#about-me">{{ data.about }}</a></li>
-        <li><a href="#tecnologies">{{ data.technologies }}</a></li>
-        <li><a href="#experience">{{ data.experience }}</a></li>
-        <li><a href="#projects">{{ data.projects }}</a></li>
-      </div>
-
-      <div class="container-right">
-        <li class="icon"><a href="https://github.com/juanmac09" target="_blank"><i class="fab fa-github"></i></a></li>
-        <li class="icon"><a href="https://www.linkedin.com/in/juan-romero-5952472bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        <li class="icon"><a [href]="urlFile" download="CV.pdf"><i class="fas fa-download"></i></a></li>
-        <li class="icon" (click)="setDarkMode()"><a><i class="fas fa-moon"></i></a></li>
-        <li class="icon" (click)="setLanguage()"><a><i class="fas fa-language"></i></a></li>
-      </div>
-    </ul>
+  <nav class="navbar" [ngClass]="{ 'navbar-darkmode': returnMode() }">
+    <div class="menu-container">
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul [class.open]="menuOpen" [ngClass]="{ 'menu-darkmode': returnMode() }">
+        <li (click)="closeMenu()">
+          <a href="#about-me">{{ data.about }}</a>
+        </li>
+        <li (click)="closeMenu()">
+          <a href="#tecnologies">{{ data.technologies }}</a>
+        </li>
+        <li (click)="closeMenu()">
+          <a href="#experience">{{ data.experience }}</a>
+        </li>
+        <li (click)="closeMenu()">
+          <a href="#projects">{{ data.projects }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container-right">
+      <li class="icon">
+        <a href="https://github.com/juanmac09" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </li>
+      <li class="icon">
+        <a
+          href="https://www.linkedin.com/in/juan-romero-5952472bb"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </li>
+      <li class="icon">
+        <a [href]="urlFile" download="CV.pdf"
+          ><i class="fas fa-download"></i
+        ></a>
+      </li>
+      <li class="icon" (click)="setDarkMode()">
+        <a><i class="fas fa-moon"></i></a>
+      </li>
+      <li class="icon" (click)="setLanguage()">
+        <a><i class="fas fa-language"></i></a>
+      </li>
+    </div>
   </nav>
 </header>
+@if (showScrollToTop) {
+<button
+  class="scroll-to-top"
+  [ngClass]="{ 'scroll-to-top-dark-mode': returnMode() }"
+  (click)="scrollToTop()"
+>
+  <i class="fas fa-arrow-up"></i>
+</button>
+}
