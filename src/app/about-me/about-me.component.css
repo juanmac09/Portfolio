@@ -20,9 +20,14 @@
 .photo {
   margin-right: 20px; /* Espacio entre la foto y la información */
   flex-shrink: 0; /* Evitar que la foto se haga más pequeña */
+  display: flex;
+  align-items: center; /* Centrar verticalmente el contenido dentro de .photo */
 }
+
 .photo img {
-    border-radius: 25%;
+  border-radius: 25%;
+  max-width: 100%; /* Asegurar que la imagen no exceda el ancho de .photo */
+  height: auto; /* Mantener la proporción de la imagen */
 }
 
 .information {

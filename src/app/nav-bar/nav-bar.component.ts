@@ -16,8 +16,9 @@ interface Menu {
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css',
 })
-export class NavBarComponent implements OnInit{
+export class NavBarComponent implements OnInit {
   language: number = 0;
+  urlFile: string = '';
   data: Menu = {
     about: '',
     technologies: '',
@@ -56,7 +57,21 @@ export class NavBarComponent implements OnInit{
   getLanguage() {
     this.translateService.$getLanguage.subscribe((language) => {
       this.data = this.dataService.getData(language).menu;
+      this.setUrl(language);
     });
   }
 
+  /**
+   * This method is responsible for setting the URL of the resume file based on the selected language.
+   * It updates the `urlFile` property with the appropriate file path based on the language parameter.
+   *
+   * @param {number} language - A number representing the selected language. 0 represents Spanish, and 1 represents English.
+   * @returns {void} - This method does not return any value.
+   */
+  setUrl(language: number) {
+    this.urlFile =
+      language === 0
+        ? 'Hoja_de_vida_Juan_David_Romero_Sanchez.pdf'
+        : 'Hoja_de_vida_Juan_David_Romero_Sanchez.english.pdf';
+  }
 }
