@@ -1,0 +1,88 @@
+/* Estilos base */
+.profile-section {
+  display: flex;
+  justify-content: center;
+  padding: 25px; /* Espaciado alrededor del contenido */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.name {
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  max-width: 800px; /* Ancho máximo para limitar el contenido */
+  width: 100%; /* Ocupar todo el ancho disponible */
+}
+
+.photo {
+  margin-right: 20px; /* Espacio entre la foto y la información */
+  flex-shrink: 0; /* Evitar que la foto se haga más pequeña */
+}
+.photo img {
+    border-radius: 25%;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente el contenido */
+  width: 100%; /* Ocupar todo el ancho disponible */
+}
+
+.sumary {
+  text-align: justify; /* Justificar el texto del resumen */
+  margin-bottom: 20px; /* Espacio opcional debajo del resumen */
+}
+
+.statistics {
+  text-align: left; /* Alinear las estadísticas a la izquierda */
+}
+
+.statistics ul {
+  list-style-type: none; /* Quitar los puntos de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+.statistics ul li {
+  display: inline-block; /* Mostrar elementos de la lista en línea */
+  margin-left: 10%; /* Espacio entre elementos */
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
+    align-items: center; /* Centrar elementos en el eje horizontal */
+  }
+
+  .photo {
+    margin-right: 0; /* Eliminar margen derecho en dispositivos pequeños */
+    margin-bottom: 20px; /* Espacio opcional debajo de la foto */
+  }
+
+  .information {
+    width: 100%; /* Ocupar todo el ancho disponible */
+  }
+
+  .sumary {
+    text-align: justify; /* Justificar el texto del resumen */
+    margin-bottom: 20px; /* Espacio opcional debajo del resumen */
+  }
+
+  .statistics {
+    text-align: center; /* Centrar estadísticas en dispositivos pequeños */
+  }
+
+  .statistics ul {
+    text-align: center; /* Centrar lista de estadísticas */
+  }
+
+  .statistics ul li {
+    display: block; /* Mostrar elementos de la lista en bloque */
+    margin: 10px auto; /* Espacio alrededor de cada elemento */
+  }
+}

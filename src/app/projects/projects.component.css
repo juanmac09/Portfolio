@@ -1,0 +1,16 @@
+.projects-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.title{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2em;
+}

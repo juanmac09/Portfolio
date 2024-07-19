@@ -1,0 +1,23 @@
+.tecnologies {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.tecnologies .title h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
