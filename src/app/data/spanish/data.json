@@ -1,21 +1,21 @@
 {
   "menu": {
     "about": "Sobre mí",
-    "tecnologies": "Tecnologías",
+    "technologies": "Tecnologías",
     "experience": "Experiencia",
     "projects": "Proyectos"
   },
   "about": {
-    "sumary": "Desarrollador de software backend con más de 4 años de experiencia autónoma y 1.5 años certificados en la creación y mantenimiento de aplicaciones robustas y escalables. Experto en lenguajes de programación como PHP y JavaScript, así como en bases de datos relacionales y no relacionales. Hábil en la implementación de APIs y servicios web, con un enfoque en la optimización del rendimiento y la seguridad. Proactivo, con una fuerte capacidad para resolver problemas complejos y trabajar en equipo para lograr soluciones innovadoras",
+    "summary": "Desarrollador de software backend con más de 4 años de experiencia autónoma y 1.5 años certificados en la creación y mantenimiento de aplicaciones robustas y escalables. Experto en lenguajes de programación como PHP y JavaScript, así como en bases de datos relacionales y no relacionales. Hábil en la implementación de APIs y servicios web, con un enfoque en la optimización del rendimiento y la seguridad. Proactivo, con una fuerte capacidad para resolver problemas complejos y trabajar en equipo para lograr soluciones innovadoras",
     "time": "+4 años como desarrollador",
     "projects": "+7 proyectos",
     "home": "Vivo en Bogotá D.C. Colombia",
     "contact": "mateoromero0910@gmail.com"
   },
 
-  "tecnologies": {
-    "title": "Tecnologias",
-    "tecnologies": [
+  "technologies": {
+    "title": "Tecnologías",
+    "technologies": [
       {
         "name": "PHP",
         "level": "Avanzado",
@@ -128,35 +128,35 @@
       {
         "title": "SastriApp",
         "description": "SastriApp es una aplicación web desarrollada con tecnologías nativas de PHP, CSS y HTML. Está diseñada para gestionar inventarios, usuarios, productos, proveedores y pedidos, específicamente dirigida a sastrerías.",
-        "project-url": "https://github.com/juanmac09/SastriApp"
+        "projectUrl": "https://github.com/juanmac09/SastriApp"
       },
       {
         "title": "Exportar e importar Excel",
         "description": "Este proyecto permite importar datos desde un archivo Excel y cargarlos a una base de datos relacional de manera exitosa. También permite exportar los datos desde la base de datos a un archivo Excel. Desarrollado con PHP y Laravel, incluye el manejo de colas en Laravel para mejorar el rendimiento.",
-        "project-url": "https://github.com/juanmac09/Export-Import_Excel"
+        "projectUrl": "https://github.com/juanmac09/Export-Import_Excel"
       },
       {
         "title": "Chat en tiempo real - Backend",
         "description": "Este proyecto incluye el desarrollo del backend utilizando Laravel para la creación de servicios API REST. Implementa el protocolo de mensajería MQTT para acciones en tiempo real, emplea middleware para la protección de rutas y utiliza tokens JWT para garantizar la seguridad del aplicativo. Además, gestiona usuarios, reportes de mensajes, grupos y tareas programadas.",
-        "project-url": "https://github.com/juanmac09/chat"
+        "projectUrl": "https://github.com/juanmac09/chat"
       },
       {
         "title": "Chat en Tiempo Real - Frontend",
         "description": "Este proyecto abarca el desarrollo del frontend para una aplicación de chat en tiempo real, utilizando Angular. Emplea programación reactiva para actualizar los valores en tiempo real y animaciones de mensajes para optimizar la experiencia del usuario. Además, integra los servicios backend para realizar solicitudes al servidor de manera eficiente.",
-        "project-url": "https://github.com/sebastiansegura2000/Chat-view"
+        "projectUrl": "https://github.com/sebastiansegura2000/Chat-view"
       },
       {
         "title": "Cursos en Línea",
         "description": "Este proyecto, desarrollado con Laravel, ofrece una plataforma completa para la gestión de cursos en línea. Incluye funcionalidades para la gestión de cursos e inscripciones, administración de usuarios y roles, y envío de notificaciones por correo electrónico. Utiliza Redis para el manejo de caché y colas, y Amazon S3 para el almacenamiento de archivos estáticos. También implementa protección de rutas y mecanismos de autorización para garantizar la seguridad y privacidad del sistema.",
-        "project-url": "https://github.com/juanmac09/online-course"
+        "projectUrl": "https://github.com/juanmac09/online-course"
       },
       {
         "title": "Gestión de Usuarios Backend",
         "description": "Este proyecto desarrolla un sistema de gestión de usuarios mediante un CRUD utilizando Java y Spring Boot. Permite realizar operaciones completas de creación, lectura, actualización y eliminación de usuarios, con interacción directa y eficiente con la base de datos.",
-        "project-url": "https://github.com/juanmac09/technical-test"
+        "projectUrl": "https://github.com/juanmac09/technical-test"
       }
     ],
-    "text-button": "Ver código"
+    "textButton": "Ver código"
   },
   "footer": {
     "title": "Todos los derechos resevados."

@@ -11,4 +11,5 @@ export class ProjectComponent {
   @Input() title: string = 'Título del Proyecto';
   @Input() description: string = 'Descripción breve del proyecto.';
   @Input() codeLink: string = '#';
+  @Input() textButton: string = 'Ver codigo';
 }

@@ -2,10 +2,10 @@
   <nav class="navbar">
     <ul>
       <div class="container-left">
-        <li><a href="#about-me">About</a></li>
-        <li><a href="#tecnologies">Tecnologies</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about-me">{{ data.about }}</a></li>
+        <li><a href="#tecnologies">{{ data.technologies }}</a></li>
+        <li><a href="#experience">{{ data.experience }}</a></li>
+        <li><a href="#projects">{{ data.projects }}</a></li>
       </div>
 
       <div class="container-right">
@@ -13,7 +13,7 @@
         <li class="icon"><a href="https://www.linkedin.com/in/juan-romero-5952472bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
         <li class="icon"><a href="#"><i class="fas fa-download"></i></a></li>
         <li class="icon"><a href="#"><i class="fas fa-moon"></i></a></li>
-        <li class="icon"><a href="#"><i class="fas fa-language"></i></a></li>
+        <li class="icon" (click)="setLanguage()"><a ><i class="fas fa-language"></i></a></li>
       </div>
     </ul>
   </nav>
