@@ -1,4 +1,4 @@
-<div class="project-card">
+<div class="project-card" [ngClass]="{'project-card-darkmode': returnMode()}">
     <h3 class="project-title">{{ title }}</h3>
     <p class="project-description">{{ description }}</p>
     <a [href]="codeLink" target="_blank" class="view-code-btn">{{ textButton }}</a>

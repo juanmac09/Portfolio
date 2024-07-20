@@ -1,5 +1,5 @@
-<div class="card">
+<div class="card" [ngClass]="{ 'card-darkmode': returnMode() }">
     <img [src]="technologyLogo" [alt]="technologyName + ' Logo'">
     <h2>{{ technologyName }}</h2>
-    <p>Nivel: {{ technologyLevel }}</p>
+    <p>{{ technologyLevel }}</p>
 </div>

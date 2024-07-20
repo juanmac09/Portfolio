@@ -9,10 +9,10 @@
           <a href="#about-me">{{ data.about }}</a>
         </li>
         <li (click)="closeMenu()">
-          <a href="#tecnologies">{{ data.technologies }}</a>
+          <a href="#experience">{{ data.experience }}</a>
         </li>
         <li (click)="closeMenu()">
-          <a href="#experience">{{ data.experience }}</a>
+          <a href="#tecnologies">{{ data.technologies }}</a>
         </li>
         <li (click)="closeMenu()">
           <a href="#projects">{{ data.projects }}</a>
@@ -37,7 +37,7 @@
           ><i class="fas fa-download"></i
         ></a>
       </li>
-      <li class="icon" (click)="setDarkMode()">
+      <li id="darkMode" class="icon" (click)="setDarkMode()">
         <a><i class="fas fa-moon"></i></a>
       </li>
       <li class="icon" (click)="setLanguage()">

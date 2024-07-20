@@ -7,6 +7,7 @@
   font-weight: 400;
   font-style: italic;
 }
+
 .name {
   text-align: center;
 }
@@ -25,7 +26,10 @@
 }
 
 .photo img {
-  border-radius: 25%;
+  width: 150px; /* Ancho fijo para la imagen de perfil */
+  height: 150px; /* Altura fija para la imagen de perfil */
+  object-fit: cover; /* Asegurar que la imagen cubra el área sin distorsionarse */
+  border-radius: 50%; /* Hacer la imagen redonda */
   max-width: 100%; /* Asegurar que la imagen no exceda el ancho de .photo */
   height: auto; /* Mantener la proporción de la imagen */
 }
@@ -92,7 +96,11 @@
   }
 }
 
-
-.profile-section-dark-mode{
+/* Dark mode styles */
+.profile-section-dark-mode {
   color: #fff;
+}
+
+.profile-section-dark-mode .photo img {
+  border: 3px solid #fff; /* Agregar borde blanco a la imagen en modo oscuro */
 }

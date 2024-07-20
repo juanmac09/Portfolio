@@ -54,3 +54,32 @@
 .view-code-btn:hover {
     background: #ff000095;
 }
+
+
+.project-card-darkmode {
+    background: #2a2a2a; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.project-card-darkmode:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada en hover */
+}
+
+.project-card-darkmode .project-title {
+    color: #ff4081; /* Color vibrante para el título */
+}
+
+.project-card-darkmode .project-description {
+    color: #b0b0b0; /* Texto de descripción claro */
+}
+
+.project-card-darkmode .view-code-btn {
+    background: #ff4081; /* Color del botón */
+    color: #fff;
+}
+
+.project-card-darkmode .view-code-btn:hover {
+    background: #ff4081a0; /* Color del botón en hover */
+}

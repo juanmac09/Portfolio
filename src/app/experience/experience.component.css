@@ -40,6 +40,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 45%;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+.event:hover {
+    transform: translateY(-8px);
 }
 
 .event.left {
@@ -132,3 +136,72 @@
 .experience-darkMode .event::before{
     background: #fff;
 }
+
+/* General Dark Mode Styles */
+.experience-darkMode .title h2 {
+    color: #e0e0e0;
+}
+
+.experience-darkMode .timeline {
+    background: #161515a7;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.experience-darkMode .line {
+    background: #e91e63; /* Color vibrante para la línea */
+}
+
+/* Event Styles in Dark Mode */
+.experience-darkMode .event {
+    background: #282828;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-left: 5px solid #e91e63; /* Línea de color vibrante */
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.experience-darkMode .event:hover {
+    background: #333333;
+    transform: translateY(-8px);
+}
+
+.experience-darkMode .event-content h2 {
+    color: #e91e63;
+}
+
+.experience-darkMode .event-content .dates,
+.experience-darkMode .event-content .location {
+    color: #888; /* Letra más oscura */
+}
+
+.experience-darkMode .event-content .description {
+    color: #a0a0a0; /* Letra más oscura */
+}
+
+/* Circle before events in dark mode */
+.experience-darkMode .event::before {
+    background: #e91e63;
+    border-color: #282828;
+}
+
+@media screen and (max-width: 600px) {
+    .experience-darkMode .timeline {
+        padding: 20px 10px;
+    }
+
+    .experience-darkMode .event {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .experience-darkMode .line {
+        display: none;
+    }
+
+    .experience-darkMode .event::before {
+        display: none;
+    }
+}
+

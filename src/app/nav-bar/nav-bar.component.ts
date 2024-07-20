@@ -74,6 +74,7 @@ export class NavBarComponent implements OnInit {
   setDarkMode() {
     this.darkMode = this.darkMode == 0 ? 1 : 0;
     this.modeService.setMode = this.darkMode;
+    this.modeService.updateBodyClass(this.returnMode());
   }
 
   returnMode(): boolean {
