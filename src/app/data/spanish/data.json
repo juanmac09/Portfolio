@@ -126,6 +126,11 @@
     "title": "Proyectos",
     "projects": [
       {
+        "title": "managementProjects",
+        "description": "Es una plataforma integral diseñada para la gestión de proyectos. Sus funcionalidades principales incluyen la asignación de tareas, la gestión de usuarios, el envío de correos electrónicos, la protección de rutas y la autenticación mediante JWT (JSON Web Token). Para el desarrollo del servicio backend, se emplearon tecnologías como Java y Spring Boot, garantizando una arquitectura robusta y escalable. Además, se estableció la conexión con servicios en la nube de AWS (Amazon Web Services), lo que proporciona una infraestructura flexible y segura para el despliegue y operación de la aplicación. ",
+        "projectUrl": "https://github.com/juanmac09/managementProjects"
+      },
+      {
         "title": "Exportar e importar Excel",
         "description": "Este proyecto permite importar datos desde un archivo Excel y cargarlos a una base de datos relacional de manera exitosa. También permite exportar los datos desde la base de datos a un archivo Excel. Desarrollado con PHP y Laravel, incluye el manejo de colas en Laravel para mejorar el rendimiento.",
         "projectUrl": "https://github.com/juanmac09/Export-Import_Excel"
