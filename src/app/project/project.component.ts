@@ -14,6 +14,8 @@ export class ProjectComponent {
   @Input() description: string = 'Descripción breve del proyecto.';
   @Input() codeLink: string = '#';
   @Input() textButton: string = 'Ver codigo';
+  @Input() textTechnology: string = 'Tecnologias: '
+  @Input() technologies:string = 'PHP, Java';
 
   darkMode:number = 0;
 

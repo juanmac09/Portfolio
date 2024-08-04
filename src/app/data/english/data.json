@@ -126,43 +126,51 @@
     "title": "Projects",
     "projects": [
       {
+        "technologies":"Java, Spring Boot, AWS, JWT, MySql",
         "title": "managementProjects",
         "description": "It is a comprehensive platform designed for project management. Its main features include task assignment, user management, email sending, route protection, and authentication via JWT (JSON Web Token). Technologies such as Java and Spring Boot were used for the development of the backend service, ensuring a robust and scalable architecture. Additionally, a connection was established with cloud services from AWS (Amazon Web Services), providing a flexible and secure infrastructure for the deployment and operation of the application.",
         "projectUrl": "https://github.com/juanmac09/managementProjects"
       },
 
       {
+        "technologies":"PHP, Laravel, Laravel Excel, Autenticación,MySql",
         "title": "Export and import Excel",
         "description": "This project allows you to successfully import data from an Excel file and load it into a relational database. It also allows you to export data from the database to an Excel file. Developed with PHP and Laravel, includes queue management in Laravel to improve performance.",
         "projectUrl": "https://github.com/juanmac09/Export-Import_Excel"
       },
       {
+        "technologies":"PHP, Laravel, Laravel Excel, JWT, MQTT, MySql",
         "title": "Real-time chat - Backend",
         "description": "This project includes the development of the backend using Laravel for the creation of REST API services. It implements the MQTT messaging protocol for real-time actions, uses middleware for route protection and uses JWT tokens to guarantee the security of the application. In addition, manage users, message reports, groups and scheduled tasks.",
         "projectUrl": "https://github.com/juanmac09/chat"
       },
       {
+        "technologies":"TypeScript, Angular, Angular Chart, JWT, MQTT, RxJS",
         "title": "Real-time chat - Frontend",
         "description": "This project covers the development of the frontend for a real-time chat application, using Angular. It uses reactive programming to update values ​​in real time and message animations to optimize the user experience. Additionally, it integrates backend services to make requests to the server efficiently.",
         "projectUrl": "https://github.com/sebastiansegura2000/Chat-view"
       },
       {
+        "technologies":"PHP, Laravel, AWS, JWT, Redis",
         "title": "Online Courses",
         "description": "This project, developed with Laravel, offers a complete platform for managing online courses. It includes functionalities for course and enrollment management, user and role administration, and sending email notifications. It uses Redis for cache and queue management, and Amazon S3 for static file storage. It also implements route protection and authorization mechanisms to ensure system security and privacy.",
         "projectUrl": "https://github.com/juanmac09/online-course"
       },
       {
+        "technologies":"Java, Spring Boot, MySql",
         "title": "Backend User Management",
         "description": "This project develops a user management system through CRUD using Java and Spring Boot. It allows complete user creation, reading, updating and deleting operations, with direct and efficient interaction with the database.",
         "projectUrl": "https://github.com/juanmac09/technical-test"
       },
       {
+        "technologies":"PHP,JavaScript, Html, Css, MySql",
         "title": "SastriApp",
         "description": "SastriApp is a web application developed with native PHP, CSS and HTML technologies. It is designed to manage inventories, users, products, suppliers and orders, specifically aimed at tailoring shops.",
         "projectUrl": "https://github.com/juanmac09/SastriApp"
       }
     ],
-    "textButton": "View code"
+    "textButton": "View code",
+    "technologyTitle": "Technologies: "
   },
   "footer": {
     "title": "All rights reserved."

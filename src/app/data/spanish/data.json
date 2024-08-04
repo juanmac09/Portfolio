@@ -126,42 +126,50 @@
     "title": "Proyectos",
     "projects": [
       {
+        "technologies":"Java, Spring Boot, AWS, JWT, MySql",
         "title": "managementProjects",
         "description": "Es una plataforma integral diseñada para la gestión de proyectos. Sus funcionalidades principales incluyen la asignación de tareas, la gestión de usuarios, el envío de correos electrónicos, la protección de rutas y la autenticación mediante JWT (JSON Web Token). Para el desarrollo del servicio backend, se emplearon tecnologías como Java y Spring Boot, garantizando una arquitectura robusta y escalable. Además, se estableció la conexión con servicios en la nube de AWS (Amazon Web Services), lo que proporciona una infraestructura flexible y segura para el despliegue y operación de la aplicación. ",
         "projectUrl": "https://github.com/juanmac09/managementProjects"
       },
       {
+        "technologies":"PHP, Laravel, Laravel Excel, Autenticación,MySql",
         "title": "Exportar e importar Excel",
         "description": "Este proyecto permite importar datos desde un archivo Excel y cargarlos a una base de datos relacional de manera exitosa. También permite exportar los datos desde la base de datos a un archivo Excel. Desarrollado con PHP y Laravel, incluye el manejo de colas en Laravel para mejorar el rendimiento.",
         "projectUrl": "https://github.com/juanmac09/Export-Import_Excel"
       },
       {
+        "technologies":"PHP, Laravel, Laravel Excel, JWT, MQTT, MySql",
         "title": "Chat en tiempo real - Backend",
         "description": "Este proyecto incluye el desarrollo del backend utilizando Laravel para la creación de servicios API REST. Implementa el protocolo de mensajería MQTT para acciones en tiempo real, emplea middleware para la protección de rutas y utiliza tokens JWT para garantizar la seguridad del aplicativo. Además, gestiona usuarios, reportes de mensajes, grupos y tareas programadas.",
         "projectUrl": "https://github.com/juanmac09/chat"
       },
       {
+        "technologies":"TypeScript, Angular, Angular Chart, JWT, MQTT, RxJS",
         "title": "Chat en Tiempo Real - Frontend",
         "description": "Este proyecto abarca el desarrollo del frontend para una aplicación de chat en tiempo real, utilizando Angular. Emplea programación reactiva para actualizar los valores en tiempo real y animaciones de mensajes para optimizar la experiencia del usuario. Además, integra los servicios backend para realizar solicitudes al servidor de manera eficiente.",
         "projectUrl": "https://github.com/sebastiansegura2000/Chat-view"
       },
       {
+        "technologies":"PHP, Laravel, AWS, JWT, Redis",
         "title": "Cursos en Línea",
         "description": "Este proyecto, desarrollado con Laravel, ofrece una plataforma completa para la gestión de cursos en línea. Incluye funcionalidades para la gestión de cursos e inscripciones, administración de usuarios y roles, y envío de notificaciones por correo electrónico. Utiliza Redis para el manejo de caché y colas, y Amazon S3 para el almacenamiento de archivos estáticos. También implementa protección de rutas y mecanismos de autorización para garantizar la seguridad y privacidad del sistema.",
         "projectUrl": "https://github.com/juanmac09/online-course"
       },
       {
+        "technologies":"Java, Spring Boot, MySql",
         "title": "Gestión de Usuarios Backend",
         "description": "Este proyecto desarrolla un sistema de gestión de usuarios mediante un CRUD utilizando Java y Spring Boot. Permite realizar operaciones completas de creación, lectura, actualización y eliminación de usuarios, con interacción directa y eficiente con la base de datos.",
         "projectUrl": "https://github.com/juanmac09/technical-test"
       },
       {
+        "technologies":"PHP,JavaScript, Html, Css, MySql",
         "title": "SastriApp",
         "description": "SastriApp es una aplicación web desarrollada con tecnologías nativas de PHP, CSS y HTML. Está diseñada para gestionar inventarios, usuarios, productos, proveedores y pedidos, específicamente dirigida a sastrerías.",
         "projectUrl": "https://github.com/juanmac09/SastriApp"
       }
     ],
-    "textButton": "Ver código"
+    "textButton": "Ver código",
+    "technologyTitle": "Tecnologia: "
   },
   "footer": {
     "title": "Todos los derechos resevados."

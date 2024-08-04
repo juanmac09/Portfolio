@@ -6,6 +6,7 @@ import { NgClass } from '@angular/common';
 import { DarkModeService } from '../Services/DarkMode/dark-mode.service';
 
 export interface Project {
+  technologies:string;
   title: string;
   description: string;
   projectUrl: string;
@@ -15,6 +16,7 @@ export interface Projects {
   title: string;
   projects: Project[];
   textButton: string;
+  technologyTitle: string;
 }
 
 @Component({
@@ -29,6 +31,7 @@ export class ProjectsComponent {
     title: '',
     projects: [],
     textButton: '',
+    technologyTitle:'',
   };
 
   darkMode: number = 0;
