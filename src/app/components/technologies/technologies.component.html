@@ -1,15 +1,26 @@
-<section class="tecnologies" id="tecnologies" [ngClass]="{'tecnologies-darkmode': returnMode()}">
+<section
+  class="tecnologies"
+  id="tecnologies"
+  [ngClass]="{ 'tecnologies-darkmode': returnMode() }"
+>
   <div class="title">
-      <h2>{{ data.title }}</h2>
+    <h2>{{ data.title }}</h2>
   </div>
 
-  <div class="cards">
-    @for (item of data.technologies; track $index) {
-        <app-tecnology 
-          technologyName="{{ item.name }}"
-          technologyLevel="{{ item.level}}"
-          technologyLogo="{{ item.image }}">
-      </app-tecnology>
-    }
+  <div class="carousel-container">
+    <div class="carousel" #carousel>
+      @for (item of data.technologies; track $index) {
+        <div class="carousel-item">
+          <app-tecnology
+            [technologyName]="item.name"
+            [technologyLevel]="item.level"
+            [technologyLogo]="item.image"
+          >
+          </app-tecnology>
+        </div>
+      }
+    </div>
+    <button class="prev" (click)="prevSlide()">&#10094;</button>
+    <button class="next" (click)="nextSlide()">&#10095;</button>
   </div>
 </section>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TecnologyComponent } from '../tecnology/tecnology.component';
 import { TranslateService } from '../../Services/Translate/translate.service';
 import { DataService } from '../../Services/Data/data.service';
@@ -15,32 +15,38 @@ interface Technologies {
   technologies: Technology[];
 }
 
-
 @Component({
   selector: 'app-technologies',
   standalone: true,
-  imports: [TecnologyComponent,NgClass],
+  imports: [TecnologyComponent, NgClass],
   templateUrl: './technologies.component.html',
-  styleUrl: './technologies.component.css'
+  styleUrl: './technologies.component.css',
 })
 export class TechnologiesComponent {
+  @ViewChild('carousel') carousel!: ElementRef;
   data: Technologies = {
     title: '',
     technologies: [
       {
         name: '',
         level: '',
-        image: ''
-      }
-    ]
+        image: '',
+      },
+    ],
   };
   darkMode: number = 0;
-  
-  constructor(private translateService: TranslateService, private dataService:DataService,private modeService: DarkModeService) {}
+  currentSlide = 0;
+  extendedTechnologies: Technology[] = [];
+  constructor(
+    private translateService: TranslateService,
+    private dataService: DataService,
+    private modeService: DarkModeService
+  ) {}
 
   ngOnInit(): void {
     this.getLanguage();
     this.getDarkMode();
+    setInterval(() => this.nextSlide(), 3000);
   }
 
   /**
@@ -53,7 +59,6 @@ export class TechnologiesComponent {
     this.data = this.dataService.getData(language).technologies;
   }
 
-  
   /**
    * Subscribes to the TranslateService's $getLanguage observable to update the component's language property.
    *
@@ -87,4 +92,54 @@ export class TechnologiesComponent {
   returnMode(): boolean {
     return this.darkMode === 1;
   }
+
+  /**
+   * This method handles the logic for moving to the previous slide in the carousel.
+   * It updates the `currentSlide` property to the previous slide index, wrapping around to the last slide if necessary.
+   * After updating the slide index, it calls the `updateSlidePosition` method to visually update the carousel's position.
+   *
+   * @returns {void} - This method does not return any value.
+   */
+  prevSlide(): void {
+    this.currentSlide =
+      this.currentSlide === 0
+        ? this.data.technologies.length - 1
+        : this.currentSlide - 1;
+    this.updateSlidePosition();
+  }
+
+  /**
+   * This method is responsible for moving to the next slide in the carousel.
+   * It updates the `currentSlide` property to the next slide index, wrapping around to the first slide if necessary.
+   * After updating the slide index, it calls the `updateSlidePosition` method to visually update the carousel's position.
+   *
+   * @returns {void} - This method does not return any value.
+   */
+  nextSlide(): void {
+    this.currentSlide =
+      this.currentSlide === this.data.technologies.length - 1
+        ? 0
+        : this.currentSlide + 1;
+    this.updateSlidePosition();
+  }
+
+  /**
+ * Updates the position of the carousel slides based on the current slide index.
+ *
+ * @description This method is responsible for visually updating the carousel's position by applying a translateX transform to the carousel element.
+ * The transform is calculated based on the current slide index and the width of a single carousel item.
+ *
+ * @param {void} - This method does not take any parameters.
+ *
+ * @returns {void} - This method does not return any value.
+ */
+updateSlidePosition(): void {
+    const carousel = document.querySelector('.carousel') as HTMLElement;
+    const itemWidth =
+      carousel.querySelector('.carousel-item')?.clientWidth || 0;
+    const visibleItems = Math.floor(carousel.offsetWidth / itemWidth);
+    const offset = this.currentSlide * itemWidth;
+
+    carousel.style.transform = `translateX(-${offset}px)`;
+}
 }
