@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '../Services/Translate/translate.service';
-import { DataService } from '../Services/Data/data.service';
+import { TranslateService } from '../../Services/Translate/translate.service';
+import { DataService } from '../../Services/Data/data.service';
+
 
 interface Footer {
   title: string;

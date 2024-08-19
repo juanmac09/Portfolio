@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
-import { TranslateService } from '../Services/Translate/translate.service';
-import { DataService } from '../Services/Data/data.service';
-import { DarkModeService } from '../Services/DarkMode/dark-mode.service';
+import { TranslateService } from '../../Services/Translate/translate.service';
+import { DataService } from '../../Services/Data/data.service';
+import { DarkModeService } from '../../Services/DarkMode/dark-mode.service';
 import { NgClass } from '@angular/common';
 
 interface Menu {

@@ -1,18 +1,22 @@
-import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { DarkModeService } from '../Services/DarkMode/dark-mode.service';
+import { DarkModeService } from '../../Services/DarkMode/dark-mode.service';
+import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-tecnology',
+  selector: 'app-project',
   standalone: true,
   imports: [NgClass],
-  templateUrl: './tecnology.component.html',
-  styleUrls: ['./tecnology.component.css'],
+  templateUrl: './project.component.html',
+  styleUrl: './project.component.css',
 })
-export class TecnologyComponent {
-  @Input() technologyName: string = '';
-  @Input() technologyLevel: string = '';
-  @Input() technologyLogo: string = '';
+export class ProjectComponent {
+  @Input() title: string = 'Título del Proyecto';
+  @Input() description: string = 'Descripción breve del proyecto.';
+  @Input() codeLink: string = '#';
+  @Input() textButton: string = 'Ver codigo';
+  @Input() textTechnology: string = 'Tecnologias: '
+  @Input() technologies:string = 'PHP, Java';
+
   darkMode:number = 0;
 
 

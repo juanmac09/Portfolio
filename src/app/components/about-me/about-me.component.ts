@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '../Services/Translate/translate.service';
-import { DataService } from '../Services/Data/data.service';
-import { DarkModeService } from '../Services/DarkMode/dark-mode.service';
+
 import { NgClass } from '@angular/common';
+import { TranslateService } from '../../Services/Translate/translate.service';
+import { DataService } from '../../Services/Data/data.service';
+import { DarkModeService } from '../../Services/DarkMode/dark-mode.service';
 
 
 interface AboutData {
