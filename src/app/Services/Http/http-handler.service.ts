@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class HttpHandlerService {
 
-  private apiUrl = environment.apiUrl;
+  private apiUrl = environment.API_URL;
   private headers = new HttpHeaders({
     'Content-Type': 'application/json'
   });
