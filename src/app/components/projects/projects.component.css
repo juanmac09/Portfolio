@@ -2,19 +2,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 20px;
+    margin: 30px auto;
+    max-width: 1300px;
+    padding: 25px;
+    gap: 25px; /* Espaciado más amplio entre las tarjetas */
 }
 
-.title{
+.title {
     text-align: center;
     font-family: "Roboto", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.projects-darkmode .title h2{
-    color: #fff;
+.projects-darkmode .title h2 {
+    color: #ffffff;
 }

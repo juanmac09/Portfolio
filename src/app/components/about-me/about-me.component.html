@@ -1,30 +1,34 @@
-<section class="profile-section" [ngClass]="{'profile-section-dark-mode':!returnMode()}" id="about-me"> 
+<section class="profile-section" [ngClass]="{'dark-mode': darkMode === 1}" id="about-me"> 
   <div class="profile">
     <div class="photo">
-      <img
-        src="me.webp"
-        
-        alt="profile.png"
-      />
+      <img src="me.webp" alt="profile.png" />
     </div>
 
     <div class="information">
       <div class="name">
         <h2>Juan David Romero Sánchez</h2>
       </div>
-      <div class="sumary">
-        <p>
-          {{ data.summary }}
-        </p>
+      <div class="summary">
+        <p>{{ data.summary }}</p>
       </div>
 
       <div class="statistics">
-        <ul>
-          <li>{{ data.time }}</li>
-          <li>{{ data.projects }}</li>
-          <li>{{ data.home }}</li>
-          <li>{{ data.contact }}</li>
-        </ul>
+        <div class="stat-item">
+          <span class="stat-icon">⏳</span>
+          <span>{{ data.time }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">💼</span>
+          <span>{{ data.projects }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">🏡</span>
+          <span>{{ data.home }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">📞</span>
+          <span>{{ data.contact }}</span>
+        </div>
       </div>
     </div>
   </div>

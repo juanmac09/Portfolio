@@ -12,7 +12,7 @@
           <a href="#experience">{{ data.experience }}</a>
         </li>
         <li (click)="closeMenu()">
-          <a href="#tecnologies">{{ data.technologies }}</a>
+          <a href="#technologies">{{ data.technologies }}</a>
         </li>
         <li (click)="closeMenu()">
           <a href="#projects">{{ data.projects }}</a>
@@ -21,21 +21,19 @@
     </div>
     <div class="container-right">
       <li class="icon">
-        <a href="https://github.com/juanmac09" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
+        <a href="https://github.com/juanmac09" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
       </li>
       <li class="icon">
-        <a
-          href="https://www.linkedin.com/in/juan-romero-5952472bb"
-          target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
+        <a href="https://www.linkedin.com/in/juan-romero-5952472bb" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </li>
       <li class="icon">
-        <a [href]="urlFile" download="CV.pdf"
-          ><i class="fas fa-download"></i
-        ></a>
+        <a [href]="urlFile" download="CV.pdf">
+          <i class="fas fa-download"></i>
+        </a>
       </li>
       <li id="darkMode" class="icon" (click)="setDarkMode()">
         <a><i class="fas fa-moon"></i></a>
@@ -46,12 +44,13 @@
     </div>
   </nav>
 </header>
+
 @if (showScrollToTop) {
-<button
-  class="scroll-to-top"
-  [ngClass]="{ 'scroll-to-top-dark-mode': returnMode() }"
-  (click)="scrollToTop()"
->
-  <i class="fas fa-arrow-up"></i>
-</button>
+  <button
+    class="scroll-to-top"
+    [ngClass]="{ 'scroll-to-top-dark-mode': returnMode() }"
+    (click)="scrollToTop()"
+  >
+    <i class="fas fa-arrow-up"></i>
+  </button>
 }

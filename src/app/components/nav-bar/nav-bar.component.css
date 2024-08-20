@@ -1,8 +1,13 @@
+/* General Styles */
 header {
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  font-weight: 500;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .navbar {
@@ -25,12 +30,18 @@ header {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #000;
+  color: #333;
+  transition: color 0.3s;
 }
 
+/* Keep this style for the menu toggle */
+.menu-toggle:hover {
+  color: #007bff;
+}
+
+/* Menu Styles */
 ul {
   display: flex;
-  justify-content: space-between;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -51,16 +62,24 @@ ul {
 }
 
 .menu-container li {
-  margin-right: 25px; /* Increase the right margin to space out items */
+  margin-right: 20px;
 }
 
 .container-left li:last-child {
-  margin-right: 0; /* Remove margin from the last item */
+  margin-right: 0;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #333;
+  transition: color 0.3s, transform 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #007bff;
+  transform: translateY(-2px);
 }
 
 li {
@@ -69,27 +88,92 @@ li {
 }
 
 .icon a {
-  color: #000;
-  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s;
 }
 
-.menu-container ul {
+.icon a:hover {
+  color: #007bff;
+}
+
+/* Scroll-to-top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s;
+  z-index: 5;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.scroll-to-top-dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.scroll-to-top-dark-mode:hover {
+  background-color: #333;
+}
+
+/* Dark Mode Styles */
+.navbar-darkmode {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-darkmode .menu-container {
+  border-bottom: 1px solid #333;
 }
 
 .navbar-darkmode .menu-toggle {
-  color: #fff;
+  color: #e0e0e0;
+}
+
+.navbar-darkmode ul {
+  background-color: #1a1a1a;
 }
 
 .navbar-darkmode a {
-  color: #fff;
+  color: #e0e0e0;
 }
 
-.navbar-darkmode .icon {
-  color: #fff;
+.navbar-darkmode .icon a {
+  color: #e0e0e0;
 }
 
+.navbar-darkmode .menu-container ul {
+  background-color: #1a1a1a;
+}
+
+.navbar-darkmode .menu-container ul li {
+  border-bottom: 1px solid #333;
+}
+
+.navbar-darkmode .menu-container ul li:hover {
+  background-color: #333;
+}
+
+.navbar-darkmode .menu-container ul li a {
+  color: #e0e0e0;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -99,11 +183,15 @@ li {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: #f8f9fa;
+    background: #1a1a1a;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
   }
 
   .menu-container ul.open {
@@ -114,7 +202,7 @@ li {
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333;
     transition: background 0.3s ease-in-out;
   }
 
@@ -123,63 +211,33 @@ li {
   }
 
   .menu-container ul li a {
-    color: #000;
+    color: #e0e0e0;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .menu-container ul li:hover {
-    background: #e2e2e2;
-  }
-
-  .menu-container ul.menu-darkmode {
     background: #333;
   }
 
-  .menu-container ul.menu-darkmode li a {
-    color: #fff;
-  }
-
-  .menu-container ul.menu-darkmode li:hover {
-    background: #444;
-  }
-
-  /* Adjust scroll-to-top button position in responsive mode */
   .scroll-to-top {
-    bottom: 80px; /* Adjusted for better visibility in responsive mode */
+    bottom: 80px;
     right: 20px;
   }
 }
 
-.scroll-to-top {
-  position: fixed;
-  bottom: 60px;
-  right: 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s;
-  z-index: 5;
+/* Sticky Header on Scroll */
+header.scrolled {
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.scroll-to-top:hover {
-  background-color: #555;
+header.scrolled .scroll-to-top {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
-.scroll-to-top-dark-mode {
-  background-color: #fff;
-  color: #000;
-}
-
-
-.scroll-to-top-dark-mode:hover {
-  background-color: #ddd;
+header.scrolled .scroll-to-top-dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
 }

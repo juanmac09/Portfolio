@@ -2,81 +2,171 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centrar horizontalmente */
-    margin: 20px auto; /* Centrar el contenedor horizontalmente */
+    justify-content: center;
+    margin: 20px auto;
     padding: 0;
+    gap: 15px; /* Espacio consistente entre tarjetas */
 }
 
 /* Estilos para las tarjetas */
 .card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 200px;
-    height: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 220px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 10px;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
-    max-width: 80px;
+    max-width: 70px;
     height: auto;
-    margin-bottom: 10px;
-    transition: transform 0.3s;
-    background: none; /* Eliminar el fondo */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
 }
 
 .card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.2));
 }
 
 .card h2 {
     margin: 0 0 10px;
-    font-size: 1.5em;
-    color: #333;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #444;
 }
 
 .card p {
     margin: 0;
     font-size: 1em;
-    color: #666;
+    color: #777;
 }
 
 /* Estilos para modo oscuro */
 .card-darkmode {
-    background: #333;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background: #2b2b2b;
+    color: #ddd;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .card-darkmode img {
-    filter: brightness(0.8);
+    filter: brightness(0.85);
 }
 
 .card-darkmode h2 {
-    color: #fff;
+    color: #e0e0e0;
 }
 
 .card-darkmode p {
-    color: #ccc;
+    color: #bbb;
 }
 
-/* Estilos responsivos */
+/* Contenedor de tecnologías */
+.tecnologies {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #f0f0f0;
+}
+
+.tecnologies .title h2 {
+  font-weight: bold;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.tecnologies-darkmode {
+    background-color: #1f1f1f;
+    transition: background-color 0.3s ease;
+}
+
+.tecnologies-darkmode .title h2 {
+    color: #fff;
+}
+
+/* Carrusel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 25%; /* 4 elementos visibles por fila */
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+
+.tecnologies-darkmode .carousel-item {
+    background-color: #333;
+    color: #fff;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* Botones redondeados */
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+.tecnologies-darkmode .prev, .tecnologies-darkmode .next {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
+/* Media Queries para hacer el carrusel responsivo */
 @media (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        align-items: center; /* Centrar las tarjetas en modo columna */
+    .carousel-item {
+        flex: 0 0 50%; /* 2 elementos visibles por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        flex: 0 0 100%; /* 1 elemento visible por fila en pantallas pequeñas */
     }
 }

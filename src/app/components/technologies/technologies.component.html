@@ -15,8 +15,8 @@
             [technologyName]="item.name"
             [technologyLevel]="item.level"
             [technologyLogo]="item.image"
-          >
-          </app-tecnology>
+            [ngClass]="{ 'card-darkmode': returnMode() }"
+          ></app-tecnology>
         </div>
       }
     </div>

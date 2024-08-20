@@ -4,18 +4,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 25px;
 }
 
 .tecnologies .title h2 {
   font-weight: bold;
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: #444;
 }
 
 .tecnologies-darkmode .title h2 {
-  color: #fff;
+  color: #ddd;
 }
 
 .carousel-container {
@@ -32,10 +32,10 @@
 }
 
 .carousel-item {
-  flex: 1 0 auto; /* Permite que los elementos se redimensionen en función del ancho disponible */
-  padding: 20px;
+  flex: 1 0 auto;
+  padding: 25px;
   box-sizing: border-box;
-  max-width: calc(100% / 3); /* Ajusta este valor para mostrar más o menos elementos */
+  max-width: calc(100% / 3);
   text-align: center;
 }
 
@@ -43,12 +43,18 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
   z-index: 10;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
@@ -69,17 +75,19 @@
   color: black;
 }
 
+.tecnologies-darkmode .prev:hover, .tecnologies-darkmode .next:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
 
 /* Media Queries para hacer el carrusel responsivo */
 @media (max-width: 768px) {
   .carousel-item {
-    max-width: calc(100% / 2); /* 2 elementos por fila en pantallas medianas */
+    max-width: calc(100% / 2);
   }
 }
 
 @media (max-width: 480px) {
   .carousel-item {
-    max-width: 100%; /* 1 elemento por fila en pantallas pequeñas */
+    max-width: 100%;
   }
 }
-

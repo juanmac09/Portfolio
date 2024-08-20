@@ -1,85 +1,116 @@
+/* Estilos del componente del proyecto */
 .project-card {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-    font-style: italic;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Bordes más suaves */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave y definida */
     margin: 15px;
-    padding: 20px;
-    width: 300px; /* Ancho fijo para todas las tarjetas */
-    min-height: 300px; /* Altura mínima para asegurar que todas tengan un tamaño uniforme */
+    padding: 25px; /* Espaciado interno más generoso */
+    width: 320px; /* Ancho ligeramente mayor */
+    min-height: 320px; /* Altura mínima ajustada */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* Esconder contenido desbordado */
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
 }
 
 .project-title {
-    margin: 0 0 10px;
-    color: #ff0000;
-    font-weight: 600;
-    font-size: 1.5em;
+    margin: 0 0 15px;
+    color: #ff0000; /* Color más suave para el título */
+    font-weight: 700; /* Mayor peso de la fuente */
+    font-size: 1.6em;
+    text-transform: uppercase; /* Título en mayúsculas */
 }
 
 .project-description {
     margin: 0;
-    color: #333;
-    flex: 1; /* Ocupa el espacio disponible */
+    color: #555; /* Color más suave para el texto */
+    flex: 1;
     display: flex;
-    align-items: center; /* Centra el contenido verticalmente */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Alinea el texto en el centro */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1em; /* Texto un poco más grande */
+    padding: 10px;
 }
 
 .view-code-btn {
     display: inline-block;
-    padding: 10px 20px;
-    background: #FF0000;
+    padding: 12px 24px; /* Botón más grande */
+    background: #ff0000; /* Color más suave */
     color: #fff;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px; /* Bordes más redondeados */
     font-weight: bold;
-    transition: background 0.3s;
-    margin-top: auto; /* Asegura que el botón se empuje al fondo */
+    transition: background 0.3s, transform 0.3s;
+    margin-top: auto;
 }
 
 .view-code-btn:hover {
-    background: #ff000095;
+    background: #ff6347b5; /* Color de hover más suave */
+    transform: translateY(-2px); /* Efecto de desplazamiento en hover */
 }
 
-
+/* Modo oscuro del proyecto */
 .project-card-darkmode {
-    background: #2a2a2a; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    background: #1f1f1f; /* Fondo aún más oscuro */
+    color: #e0e0e0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .project-card-darkmode:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada en hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .project-card-darkmode .project-title {
-    color: #ff4081; /* Color vibrante para el título */
+    color: #ff4081; /* Color vibrante para el modo oscuro */
 }
 
 .project-card-darkmode .project-description {
-    color: #b0b0b0; /* Texto de descripción claro */
+    color: #b0b0b0;
 }
 
 .project-card-darkmode .view-code-btn {
-    background: #ff4081; /* Color del botón */
+    background: #ff4081;
     color: #fff;
 }
 
 .project-card-darkmode .view-code-btn:hover {
-    background: #ff4081a0; /* Color del botón en hover */
+    background: #ff4081c7;
+    transform: translateY(-2px);
+}
+
+/* Estilos del contenedor de proyectos */
+.projects-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 1300px;
+    padding: 30px;
+    gap: 25px; /* Mayor espacio entre tarjetas */
+}
+
+.title {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700; /* Mayor peso de la fuente */
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase; /* Título en mayúsculas */
+}
+
+.projects-darkmode .title h2 {
+    color: #fff;
 }
