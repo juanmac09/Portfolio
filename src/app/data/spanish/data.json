@@ -119,6 +119,13 @@
         "position": "Desarrollador Backend",
         "duration": "Enero 2024 - Julio 2024",
         "description": "Implementé funcionalidades críticas en aplicaciones backend, mejorando el rendimiento en un 30%, y contribuí al desarrollo frontend con Angular, mejorando la usabilidad en un 25%. Exploré y evalué la viabilidad de microservicios para futuras iteraciones y trabajé en colaboración con equipos interdisciplinarios para asegurar la cohesión y eficiencia del desarrollo, utilizando Git y GitHub para el control de versiones y la colaboración."
+      },
+
+      {
+        "company": "Fusepong",
+        "position": "Desarrollador FullStack",
+        "duration": "Septiembre 2024 - Actualmente",
+        "description": "Tengo experiencia en el desarrollo de aplicaciones y microservicios, centrándome en la optimización de procesos y la mejora del rendimiento del sistema. He trabajado en la automatización de pruebas para garantizar la calidad del software en distintas etapas del desarrollo, implementando soluciones de monitoreo y notificación que integran sistemas de mensajería y alertas. Además, poseo una sólida capacidad para desarrollar funciones y adaptar pruebas automatizadas que validen funcionalidades críticas. Mantengo un enfoque constante en la mejora continua, equilibrando el desarrollo y las pruebas de software."
       }
     ]
   },
