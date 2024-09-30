@@ -35,20 +35,42 @@ export class ExperienceComponent implements OnInit {
     private translateService: TranslateService,
     private dataService: DataService,
     private modeService: DarkModeService
-  ) {}
-  
+  ) { }
+
   ngOnInit(): void {
     this.getDarkMode();
     this.getLanguage();
   }
 
   /**
-   * Retrieves the experience data for the specified language.
-   *
-   * @param {number} language - The language code to retrieve the experience data for.
-   */
+ * Retrieves the experience data for the specified language.
+ *
+ * @param {number} language - The language code to retrieve the experience data for.
+ */
   getData(language: number): void {
-    this.experience = this.dataService.getData(language).Experience;
+    const data = this.dataService.getData(language).Experience;
+
+    // Llamar a la función para ordenar los trabajos.
+    this.experience = {
+      ...data,
+      jobs: this.sortData(data.jobs)
+    };
+  }
+
+  /**
+   * Ordena los trabajos por la fecha de finalización, de la más reciente a la más antigua.
+   *
+   * @param {Job[]} jobs - El arreglo de trabajos a ordenar.
+   * @returns {Job[]} - El arreglo de trabajos ordenados.
+   */
+  sortData(jobs: Job[]): Job[] {
+    return jobs.sort((a: Job, b: Job) => {
+      const dateA = new Date(a.duration.split(' - ')[1] === 'Actualmente' ? new Date() : a.duration.split(' - ')[1]);
+      const dateB = new Date(b.duration.split(' - ')[1] === 'Actualmente' ? new Date() : b.duration.split(' - ')[1]);
+
+      // Ordenar de la más reciente a la más antigua.
+      return dateB.getTime() - dateA.getTime();
+    });
   }
 
   /**
